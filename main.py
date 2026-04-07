@@ -38,6 +38,7 @@ def startup_event():
     compound_model = os.getenv("GROQ_COMPOUND_MODEL", "compound-beta-mini")
     compound_api_key = os.getenv("GROQ_COMPOUND_API_KEY", "")
 
+    global groq_client
     groq_client = GroqClient(
         api_base,
         chat_model,
